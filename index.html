@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Sílabo: Análisis y Diseño de Algoritmos</title>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#1f1f23;--soft:#55555c;--dot:#c4c4c8;--yellow:#d4d4d8;--pink:#e0c8c8;--green:#cbcbd0;--blue:#e5e5e8;--accent:#8b1e2d;--olive:#3b3b42;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;padding:10px 0 30px;background:#b9b9be;color:var(--ink);font-family:"Patrick Hand","Comic Sans MS",cursive,sans-serif;font-size:18px;line-height:1.42}
+.page{max-width:980px;margin:40px auto;padding:34px 38px 44px 46px;background:#fff;background-image:radial-gradient(var(--dot) 1.2px,transparent 1.3px);background-size:22px 22px;border-radius:6px;box-shadow:0 2px 14px rgba(0,0,0,.22);position:relative}
+.page::before{content:"";position:absolute;left:-12px;top:24px;bottom:24px;width:18px;background:repeating-linear-gradient(#111 0 15px,transparent 15px 34px);border-radius:10px}
+h1{font-family:"Kaushan Script","Brush Script MT",cursive;font-weight:400;font-size:clamp(40px,8vw,70px);margin:0 0 6px;line-height:1;letter-spacing:2px;text-align:center}
+h2{font-family:"Kaushan Script","Brush Script MT",cursive;font-weight:400;font-size:27px;margin:30px 0 8px;color:var(--olive)}
+h2 span{background:linear-gradient(transparent 55%,var(--yellow) 55%,var(--yellow) 92%,transparent 92%);padding:0 6px}
+h3{font-weight:400;font-size:20px;margin:14px 0 4px;color:var(--accent)}
+.in{margin-left:14px}
+.top{display:flex;gap:8px;padding:2px 0;border-bottom:1.5px dashed var(--dot)}
+.top b{width:190px;flex:none;font-weight:400;color:var(--accent)}
+.r{display:flex;padding:2px 0;border-bottom:1.5px dashed var(--dot)}
+.r>.l{width:34px;flex:none;color:var(--accent)}
+.r>.k{width:290px;flex:none}
+.r>.v{flex:1}
+.hl{background:linear-gradient(transparent 45%,var(--yellow) 45%,var(--yellow) 90%,transparent 90%);padding:0 3px}
+.hp{background:linear-gradient(transparent 45%,var(--pink) 45%,var(--pink) 90%,transparent 90%);padding:0 3px}
+.hg{background:linear-gradient(transparent 45%,var(--green) 45%,var(--green) 90%,transparent 90%);padding:0 3px}
+.box{background:var(--pink);padding:12px 16px;border-radius:3px;transform:rotate(-.5deg);margin:10px 0 10px 8px}
+.bul{margin:2px 0 2px 16px}
+.bul::before{content:"●";color:var(--accent);margin-right:8px}
+.scroll{overflow-x:auto;padding:4px}
+table{border-collapse:separate;border-spacing:0;width:100%;border:2.5px solid var(--ink);border-radius:8px;background:rgba(255,255,255,.88)}
+td,th{border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:5px 8px;vertical-align:top;text-align:left;font-weight:400}
+tr>*:last-child{border-right:0}
+tr:last-child>*{border-bottom:0}
+th{background:var(--green);font-size:17px}
+.ut{background:#33333a;color:#fff;font-size:22px;font-family:"Kaushan Script",cursive}
+.c{text-align:center;color:var(--accent);white-space:nowrap;font-size:19px}
+.lb{background:var(--blue)}
+.ev{background:var(--pink)}
+.pc{background:var(--yellow);font-size:19px}
+.n{font-size:15.5px;color:var(--soft)}
+.fm{background:var(--pink);display:inline-block;padding:4px 14px;border-radius:3px;margin:6px 0 2px 8px;transform:rotate(-.6deg)}
+.note{font-size:15.5px;color:var(--soft)}
+.page{min-height:1386px}
+@media (max-width:700px){.page{min-height:0}}
+.mvbox{transform:none;font-size:21px;line-height:1.5;padding:18px 22px;margin:12px 0 22px 8px;border-left:6px solid var(--accent)}
+.mvbox.vis{background:var(--green);border-left-color:var(--ink)}
+.mvbox b{font-weight:400}
+.tag{font-size:16px;color:var(--accent);border-bottom:1.5px solid var(--accent)}
+.yr+.yr{margin-left:8px}
+.yr{font-family:"Patrick Hand",sans-serif;font-size:19px;color:#fff;background:var(--accent);padding:2px 14px;border-radius:3px;margin-left:12px;vertical-align:middle}
+@page{size:A4;margin:8mm}
+@media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff;padding:0}.page{margin:0 auto;min-height:0;box-shadow:none;border-radius:0;page-break-after:always;break-after:page}.page:last-child{page-break-after:auto;break-after:auto}}
+@media (max-width:700px){.page{margin:10px 8px 10px 20px;padding:22px 14px 28px 18px}.r>.k{width:140px}.top b{width:110px}table{min-width:600px}body{font-size:17px}h2{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="page mv">
+<h1>MISIÓN Y VISIÓN</h1>
+<div class="top"><b>ESCUELA PROFESIONAL</b><span>INGENIERÍA DE SISTEMAS</span></div>
+<div class="top"><b>PERIODO</b><span>2026 - 2030</span></div>
+
+<h2><span>MISIÓN</span> <small class="yr">2026 - 2030</small><small class="yr">2021 - 2025</small></h2>
+<div class="box mvbox"><span class="tag">2026 - 2030</span><br>Formar profesionales <b class="hl">íntegros y altamente competitivos</b> en Ingeniería de Sistemas y Computación, con sólidos <b class="hl">conocimientos científicos y tecnológicos, espíritu innovador, capacidad investigativa y compromiso ético-social</b>, capaces de liderar la <b class="hl">transformación digital</b> y brindar <b class="hl">soluciones sostenibles</b> a los desafíos del entorno local, regional, nacional e internacional.</div>
+
+<div class="box mvbox"><span class="tag">2021 - 2025</span><br>Somos una escuela profesional que forma profesionales <b class="hl">competitivos</b> en las disciplinas de Sistemas y Computación, protagonistas del <b class="hl">desarrollo regional y nacional</b>; a través de la <b class="hl">excelencia académica</b>.</div>
+
+<h2><span>VISIÓN</span> <small class="yr">2026 - 2030</small></h2>
+<div class="box mvbox vis">Todos los peruanos accedan a una educación que les permite <b class="hl">desarrollar su potencial</b> desde la primera infancia y convertirse en ciudadanos que <b class="hl">valoran su cultura</b>, conocen sus derechos y responsabilidades, desarrollan sus <b class="hl">talentos</b> y participan de manera <b class="hl">innovadora, competitiva y comprometida</b> en las dinámicas sociales, contribuyendo al desarrollo de sus comunidades y del país en conjunto.</div>
+</div>
+
+<!-- PÁGINA 1 -->
+<div class="page">
+<h1>SILABO</h1>
+<div class="top"><b>FACULTAD</b><span>INGENIERIA MECANICA ELECTRICA, ELECTRONICA Y SISTEMAS</span></div>
+<div class="top"><b>ESCUELA PROFESIONAL</b><span>INGENIERIA DE SISTEMAS</span></div>
+<div class="top"><b>PROGRAMA DE ESTUDIOS</b><span>INGENIERÍA DE SISTEMAS</span></div>
+
+<h2><span>I. INFORMACIÓN GENERAL</span></h2>
+<h3>1.1 Identificación Académica</h3>
+<div class="in">
+<div class="r"><span class="l">a)</span><span class="k">Curso</span><b class="v hl" style="font-weight:400">ANÁLISIS Y DISEÑO DE ALGORITMOS</b></div>
+<div class="r"><span class="l">b)</span><span class="k">Código</span><span class="v">SIS214</span></div>
+<div class="r"><span class="l">c)</span><span class="k">Prerrequisito</span><span class="v">SIS210 - ALGORITMOS Y ESTRUCTURAS DE DATOS</span></div>
+<div class="r"><span class="l">d)</span><span class="k">Número de horas lectiva</span><span class="v">04h teóricas, 02h prácticas, Total 06 horas</span></div>
+<div class="r"><span class="l">e)</span><span class="k">Número de horas no lectivas del estudiante</span><span class="v">2 h y 0 min</span></div>
+<div class="r"><span class="l">f)</span><span class="k">N° de créditos</span><span class="v">05</span></div>
+<div class="r"><span class="l">g)</span><span class="k">Número de horas virtuales por unidad</span><span class="v">02</span></div>
+<div class="r"><span class="l">h)</span><span class="k">Área curricular</span><span class="v">Estudios específicos</span></div>
+<div class="r"><span class="l">i)</span><span class="k">Ciclo del plan de estudios</span><span class="v">V</span></div>
+<div class="r"><span class="l">j)</span><span class="k">Características del curso</span><span class="v">I+D+i</span></div>
+<div class="r"><span class="l">k)</span><span class="k">Duración</span><span class="v">Del 24 de Agosto al 24 de Diciembre del 2026</span></div>
+<div class="r"><span class="l">l)</span><span class="k">Semestre académico</span><span class="v">2026-II</span></div>
+<div class="r"><span class="l">m)</span><span class="k">Modalidad de estudios</span><span class="v">Presencial</span></div>
+<div class="r"><span class="l">n)</span><span class="k">Idioma de desarrollo del curso</span><span class="v">Español</span></div>
+<div class="r"><span class="l">o)</span><span class="k">Currículo vigente</span><span class="v">2021 - 2025 V.2.0</span></div>
+<div class="r"><span class="l">p)</span><span class="k">Nivel de desempeño</span><span class="v">INTERMEDIO</span></div>
+</div>
+
+<h3>1.2 Docente</h3>
+<div class="in">
+<div class="r"><span class="l">a)</span><span class="k">Apellidos y nombres</span><span class="v">ALLCA MAMANI UBALDO</span></div>
+<div class="r"><span class="l">b)</span><span class="k">Condición y categoría</span><span class="v">NOMBRADO AUX. T.C.</span></div>
+<div class="r"><span class="l">c)</span><span class="k">Especialidad</span><span class="v">ING. DE SISTEMAS</span></div>
+<div style="height:12px"></div>
+<div class="r"><span class="l">a)</span><span class="k">Apellidos y nombres</span><span class="v">MAMANI HUACANI ZULEMA LILIAN</span></div>
+<div class="r"><span class="l">b)</span><span class="k">Condición y categoría</span><span class="v">NOMBRADO AUX. T.C.</span></div>
+<div class="r"><span class="l">c)</span><span class="k">Especialidad</span><span class="v">ING. DE SISTEMAS</span></div>
+</div>
+
+<h3>1.3 Ambiente donde se realizó el aprendizaje</h3>
+<div class="in"><div class="r"><span class="l">a)</span><span class="v">Aula 301, Lab 3</span></div></div>
+
+<h2><span>II. SUMILLA</span></h2>
+<p>El curso de Análisis y Diseño de Algoritmos corresponde al área de estudios específicos, es de carácter <span class="hl">teórico-práctico</span> y tiene como propósito proporcionar los principios fundamentales del análisis, diseño e implementación de algoritmos para la solución de problemas computacionales. Su tratado temático comprende la complejidad de los algoritmos; análisis de recurrencias; algoritmo y estrategia algorítmica; fuerza bruta y búsqueda exhaustiva; algoritmos de divide y vencerás; algoritmo voraz; programación dinámica; algoritmos de retroceso; ramificación y acotación; algoritmos de coincidencia de cadenas; conjuntos disjuntos; problemas P y NP-completos; grafos. El curso comprende dos unidades:</p>
+<div class="bul"><span class="hg">Unidad I:</span> Análisis de algoritmos.</div>
+<div class="bul"><span class="hg">Unidad II:</span> Diseño de algoritmos</div>
+
+<h2><span>III. PERFIL DEL EGRESADO</span></h2>
+<p><span class="hp">CE2:</span> Identifica, formula y resuelve problemas complejos de Ingeniería de Sistemas, aplicando principios de ingeniería, ciencias y matemáticas, y usando técnicas, métodos, herramientas, y normas apropiadas.</p>
+
+<h2><span>IV. LOGRO DE APRENDIZAJE DEL CURSO</span></h2>
+<div class="box">Soluciona problemas algorítmicos aplicando técnicas de análisis y diseño, utilizando métodos eficientes para garantizar correctitud y optimización.</div>
+
+<h2><span>V. TRATAMIENTO DE UNIDADES DIDÁCTICAS</span></h2>
+<div class="scroll"><table>
+<tr><td class="ut" style="width:26%">UNIDAD 1</td><td class="ut" colspan="3">UNIDAD 1</td></tr>
+<tr><td colspan="4"><span class="hl">LOGROS DE APRENDIZAJE DE LA UNIDAD</span><br>Analiza algoritmos utilizando técnicas básicas para comprender su estructura y eficiencia en la resolución de problemas computacionales.</td></tr>
+<tr><td class="lb">TIEMPO DE DESARROLLO</td><td colspan="3">Del 24 de Agosto al 26 de Octubre del 2026 (Total 72 horas)</td></tr>
+<tr><td class="lb">HORAS DE ENSEÑANZA VIRTUAL/UNIDAD</td><td colspan="3">08</td></tr>
+<tr><th class="c" style="width:9%">SEMANAS</th><th style="width:31%">CRITERIOS DE DESEMPEÑO</th><th style="width:30%">CONOCIMIENTOS</th><th>RETROALIMENTACIÓN FORMAL (*)</th></tr>
+</table></div>
+</div>
+
+<!-- PÁGINA 2 -->
+<div class="page">
+<div class="scroll"><table>
+<colgroup><col style="width:26%"><col style="width:25%"><col style="width:26%"><col style="width:23%"></colgroup>
+<tr><td class="c">Semana 1</td><td>Los conceptos básicos del análisis de algoritmos, su definición, importancia y fundamentos de computación son identificados y explicados mediante ejemplos prácticos implementados en C/C++.</td><td>Análisis Básico Definición y ejemplos de algoritmos. Importancia de estudiar algoritmos. Conceptos básicos de computación. C / C++</td><td></td></tr>
+<tr><td class="c">Semana 2</td><td>Las técnicas de análisis de complejidad y notaciones asintóticas (Big O, Θ, Ω) son aplicadas en la evaluación del rendimiento de algoritmos considerando casos peor, promedio y mejor.</td><td>Análisis Básico: Notación (asintótica,Omega yTheta), y propiedades matemáticas.</td><td></td></tr>
+<tr><td class="c">Semana 3</td><td>Los algoritmos de ordenamiento (burbuja, inserción y selección) son implementados y comparados analizando su complejidad temporal en distintos escenarios.</td><td>Algoritmos de Ordenamiento Ordenamiento por burbuja, inserción y selección. Análisis y comparación de complejidad.</td><td></td></tr>
+<tr><td class="c">Semana 4</td><td>Las estrategias de búsqueda y estructuras HASH son aplicadas en la resolución de problemas computacionales evaluando su eficiencia y pertinencia.</td><td>Estrategias algorítmicas Búsqueda lineal y binaria. Aplicaciones y eficiencia. HASH Tables</td><td></td></tr>
+<tr><td class="c">Semana 5</td><td>Los algoritmos recursivos son diseñados e implementados resolviendo problemas clásicos como factorial y Fibonacci de manera estructurada.</td><td>Algoritmos Recursivos Conceptos de recursión. Ejemplos: factores y Fibonacci.</td><td></td></tr>
+<tr><td class="c">Semana 6</td><td>La estrategia de divide y vencerás y los algoritmos asociados (Merge Sort y Quick Sort) son aplicados en la resolución de problemas evaluando su estructura y complejidad.</td><td>Algoritmos y estructuras de datos fundamentales Divide y Vencerás Estrategias de divide y vencerás. Merge Sort y Quick Sort.</td><td class="ev">EV1-Benchmarking de Complejidad Asintótica de algoritmos Mergesort y Quick Sort (40%)</td></tr>
+<tr><td class="c">Semana 7</td><td>Los algoritmos voraces son diseñados y aplicados en problemas de optimización garantizando soluciones eficientes bajo criterios de optimalidad.</td><td>Algoritmos Voraces Concepto de algoritmo voraz. Ejemplos: problema de la mochila, selección de actividad.</td><td></td></tr>
+<tr><td class="c">Semana 8</td><td>Las técnicas de programación dinámica son implementadas en la resolución de problemas de optimización como mochila y cadena de matrices.</td><td>Programación Dinámica Introducción a la programación dinámica. Ejemplos: problema de la mochila, cadena de matrices.</td><td></td></tr>
+<tr><td class="c">Semana 9</td><td>Las estructuras de datos avanzadas (árboles y grafos) son utilizadas en el diseño de algoritmos aplicados a problemas computacionales.</td><td>Estructuras de Datos Avanzadas Árboles, grafos y estructuras de datos avanzadas. Aplicaciones en algoritmos.</td><td class="ev">EV2-Proyecto:Diseñar Aplicacion con algoritmos fundamentales y estrucuturas de datos avanzados. (60%)</td></tr>
+<tr><td class="pc" colspan="4">PORCENTAJE DE AVANCE ACADÉMICO DE LA UNIDAD: 50%</td></tr>
+<tr><td colspan="4" class="n">(*)Durante el desarrollo de la unidad, el docente deberá implementar procesos permanentes de evaluación formativa, brindando retroalimentación descriptiva y reflexiva a partir de los criterios de desempeño establecidos, con la finalidad de orientar la mejora progresiva de las evidencias de aprendizaje y promover la autorregulación del aprendizaje en los estudiantes.</td></tr>
+</table></div>
+
+<div class="scroll"><table>
+<tr><td class="ut" style="width:26%">UNIDAD 2</td><td class="ut" colspan="3">UNIDAD 2</td></tr>
+<tr><td colspan="4"><span class="hl">LOGROS DE APRENDIZAJE DE LA UNIDAD</span><br>Diseña algoritmos aplicando técnicas de análisis para garantizar eficiencia y correctitud en la resolución de problemas computacionales</td></tr>
+<tr><td class="lb">TIEMPO DE DESARROLLO</td><td colspan="3">Del 26 de Octubre al 24 de Diciembre del 2026 (Total 72 horas)</td></tr>
+<tr><td class="lb">HORAS DE ENSEÑANZA VIRTUAL/UNIDAD</td><td colspan="3">08</td></tr>
+<tr><th class="c" style="width:9%">SEMANAS</th><th style="width:31%">CRITERIOS DE DESEMPEÑO</th><th style="width:30%">CONOCIMIENTOS</th><th>RETROALIMENTACIÓN FORMAL (*)</th></tr>
+</table></div>
+</div>
+
+<!-- PÁGINA 3 -->
+<div class="page">
+<div class="scroll"><table>
+<colgroup><col style="width:26%"><col style="width:25%"><col style="width:26%"><col style="width:23%"></colgroup>
+<tr><td class="c">Semana 10</td><td>Los conceptos de computabilidad y complejidad de autómatas son interpretados evaluando el uso de recursos computacionales en la ejecución de algoritmos.</td><td>Computabilidad y complejidad básica de autómatas C++ y Python</td><td></td></tr>
+<tr><td class="c">Semana 11</td><td>Las representaciones de grafos y algoritmos de recorrido (BFS y DFS) son implementados en la resolución de problemas de exploración de grafos.</td><td>Algoritmos en Grafos Representaciones de grafos. Recorridos en grafos: BFS y DFS.</td><td></td></tr>
+<tr><td class="c">Semana 12</td><td>Los algoritmos de grafos para caminos mínimos y flujo máximo (Dijkstra, Bellman-Ford) son aplicados en problemas de optimización de redes.</td><td>Algoritmos en Grafos Algoritmos de caminos mínimos: Dijkstra y Bellman Ford. Algoritmos de flujo máximo</td><td></td></tr>
+<tr><td class="c">Semana 13</td><td>Los algoritmos de backtracking son diseñados e implementados para la resolución de problemas combinatorios como N-reinas y Sudoku</td><td>Algoritmos de Backtracking Concepto de retroceso. Ejemplos: N-reinas, Sudoku</td><td></td></tr>
+<tr><td class="c">Semana 14</td><td>Las técnicas de análisis de algoritmos son empleadas para estimar el tiempo de ejecución y eficiencia en la solución de problemas computacionales.</td><td>Estructuras de datos avanzadas y análisis de algoritmos</td><td></td></tr>
+<tr><td class="c">Semana 15</td><td>Los algoritmos probabilísticos (Monte Carlo y Las Vegas) son aplicados en la resolución de problemas bajo incertidumbre en contextos reales</td><td>Algoritmos Probabilísticos Introducción a los algoritmos probabilísticos. Monte Carlo y Las Vegas.</td><td class="ev">EV3-Implementar algoritmos de grafos, flujo máximo, backtraking y probabilisticos (40%)</td></tr>
+<tr><td class="c">Semana 16</td><td>Los algoritmos paralelos y tendencias actuales son analizados y aplicados en la resolución de problemas computacionales de alto rendimiento.</td><td>Temas Avanzados y Tendencias Actuales Algoritmos cuánticos y de aprendizaje automático. Algoritmos paralelos</td><td></td></tr>
+<tr><td class="c">Semana 17</td><td>Los algoritmos paralelos y tendencias actuales son analizados y aplicados en la resolución de problemas computacionales de alto rendimiento.</td><td>Algoritmos cuánticos de aprendizaje automático. Algoritmos paralelos</td><td></td></tr>
+<tr><td class="c">Semana 18</td><td>Los algoritmos y técnicas estudiadas durante el curso son integrados y aplicados en el desarrollo de un proyecto final que resuelve un problema real</td><td>Proyecto de Optimización de Procesos Complejos</td><td class="ev">EV4-Evidencia Proyecto final (60%)</td></tr>
+<tr><td class="pc" colspan="4">PORCENTAJE DE AVANCE ACADÉMICO DE LA UNIDAD: 50%</td></tr>
+<tr><td colspan="4" class="n">(*)Durante el desarrollo de la unidad, el docente deberá implementar procesos permanentes de evaluación formativa, brindando retroalimentación descriptiva y reflexiva a partir de los criterios de desempeño establecidos, con la finalidad de orientar la mejora progresiva de las evidencias de aprendizaje y promover la autorregulación del aprendizaje en los estudiantes.</td></tr>
+</table></div>
+
+<h2><span>VI. ESTRATEGIAS METODOLÓGICAS</span></h2>
+<h3>6.1 De enseñanza</h3>
+<div class="in">Método expositivo, talleres individuales y grupales, Lectura, análisis e interpretación de textos, preguntas y analogías</div>
+<h3>6.2 De aprendizaje</h3>
+<div class="in">Sesiones de aprendizaje significativo, basados en sesiones de aprendizaje</div>
+<h3>6.3 De investigación formativa</h3>
+<div class="in">Desarrollo de Proyectos, Análisis y Síntesis</div>
+<h3>6.4 De responsabilidad social universitaria</h3>
+<div class="in">Resolución de problemas reales en la comunidad como proyectos de incubadoras automatizadas</div>
+<h3>6.5 De enseñanza virtual</h3>
+<div class="in">Sesiones de video conferencia, aulas virtuales para la evaluación, foros y seguimiento del rendimiento del estudiante.</div>
+
+<h2><span>VII. MEDIOS Y MATERIALES DIDÁCTICOS</span></h2>
+</div>
+
+<!-- PÁGINA 4 -->
+<div class="page">
+<p>Auditivos De acceso personal: Voz humana. Visuales Estáticos: Separatas, Guías de estudio, pizarra. Video tutoriales. Video conferencias. C/C++ Python, Colab Equipos: Computador con acceso a internet dedicado.</p>
+
+<h2><span>VIII. EVALUACIÓN DEL APRENDIZAJE</span></h2>
+<h3>8.1 Logro de aprendizaje, evidencias de desempeño, ponderación, técnicas e instrumentos de evaluación.</h3>
+<div class="scroll"><table>
+<tr><th>UNIDAD</th><th>LOGROS DE APRENDIZAJE</th><th>EVIDENCIAS DESEMPEÑO: De acción, objeto o producto (%)</th><th>PONDERACIÓN (Obligatorio en base a 100%)</th><th>TÉCNICAS</th><th>INSTRUMENTOS</th></tr>
+<tr><td class="c">1</td><td>Analiza algoritmos utilizando técnicas básicas para comprender su estructura y eficiencia en la resolución de problemas computacionales.</td><td>EV1-Benchmarking de Complejidad Asintótica de algoritmos Mergesort y Quick Sort (40%) EV2-Proyecto:Diseñar Aplicacion con algoritmos fundamentales y estrucuturas de datos avanzados. (60%)</td><td class="c">50%</td><td>Evaluación Trabajos encargados</td><td>Portafalio Lista de cotejo Examen escrito</td></tr>
+<tr><td class="c">2</td><td>Diseña algoritmos aplicando técnicas de análisis para garantizar eficiencia y correctitud en la resolución de problemas computacionales</td><td>EV3-Implementar algoritmos de grafos, flujo máximo, backtraking y probabilisticos (40%) EV4-Evidencia Proyecto final (60%)</td><td class="c">50%</td><td>Evaluación Trabajos encargados</td><td>Portafalio Lista de cotejo Examen escrito</td></tr>
+</table></div>
+
+<h3>8.2 Evidencias de aprendizaje del semestre académico.</h3>
+<div class="scroll"><table>
+<tr><th>LOGRO DE APRENDIZAJE DEL CURSO</th><th>EVIDENCIAS: ACCIÓN, OBJETO o PRODUCTO</th><th>FECHA DE PRESENTACIÓN</th></tr>
+<tr><td>Soluciona problemas algorítmicos aplicando técnicas de análisis y diseño, utilizando métodos eficientes para garantizar correctitud y optimización.</td><td>Proyecto: “Optimización de un Sistema de Logística y Distribución</td><td>El 14 de Diciembre del 2026</td></tr>
+</table></div>
+<p class="note">Es el trabajo realizado durante el desarrollo del curso, con el monitoreo permanente del docente. Es importante tener en cuenta que la naturaleza del producto debe ser coherente con el logro del aprendizaje.</p>
+
+<h3>8.3 Calificación.</h3>
+<div class="in">
+<p>La fórmula para la obtención del promedio parcial de cada unidad didáctica es la siguiente:</p>
+<div class="fm">Promedio parcial de la unidad 1 = 40% (EVI 1) + 60% (EVI 2)</div>
+<div>- EVI 1: Evidencia de aprendizaje 1</div>
+<div>- EVI 2: Evidencia de aprendizaje 2</div>
+<div class="fm">Promedio parcial de la unidad 2 = 40% (EVI 1) + 60% (EVI 2)</div>
+<div>- EVI 1: Evidencia de aprendizaje 1</div>
+<div>- EVI 2: Evidencia de aprendizaje 2</div>
+<p>La fórmula para la obtención del promedio final del curso es la siguiente:</p>
+<div class="fm">Promedio final = 50% (I UPP) + 50% (II UPP)</div>
+<div>Donde:</div>
+<div>I UPP : Primero unidad promedio parcial</div>
+<div>II UPP : Segundo unidad promedio parcial</div>
+</div>
+
+<h2><span>IX. FUENTES DE INFORMACIÓN</span></h2>
+<h3>9.1 Bibliográficas</h3>
+<div class="in">
+<span class="hg">Básica</span>
+<div>Cormen, T. H., Leiserson, C. E., Rivest, R. L., &amp; Stein, C. (2022). Introduction to Algorithms (4th ed.). The MIT Press.</div>
+<div>Sedgewick, R., &amp; Wayne, K. (2011). Algorithms (4th ed.). Addison-Wesley.</div>
+<div>Kleinberg, J., &amp; Tardos, É. (2006). Algorithm Design. Addison-Wesley.</div>
+<div>Skiena, S. S. (2008). The Algorithm Design Manual (2nd ed.). Springer.</div>
+<div>Dasgupta, S., Papadimitriou, C. H., &amp; Vazirani, U. V. (2006). Algorithms. McGraw-HilL</div>
+<br><span class="hg">Complementarias</span>
+<div>Aho, A. V., Hopcroft, J. E., &amp; Ullman, J. D. (1974). The Design and Analysis of Computer Algorithms. Addison-Wesley.</div>
+<div>Manber, U. (1989). Introduction to Algorithms: A Creative Approach. Addison-Wesley.</div>
+<div>Hoare, C. A. R., &amp; Jones, C. B. (1989). Essays in Computing Science. Addison-Wesley.</div>
+<div>Bird, R., &amp; Gibbons, J. (1988). Algorithm Design with Haskell. Cambridge University Press.</div>
+<br><span class="hg">Electrónicas</span>
+<div>-http://ocw.mit.edu: portal del Proyecto OCW (Open Course Ware) del Massachutes Institute of Techonology que contiene información de los cursos que dictan.</div>
+<div>-http://see.stanford.edu: portal del Proyecto Ingeniería en todo lugar (Engineering Everywhere) de la Universidad de Stanford que contiene información de los cursos que dictan.</div>
+<div>- https://sia.mit.edu/ Laboratorio de señales y algoritmos del MIT</div>
+</div>
+<p style="margin-top:16px">Producción intelectual del docente relacionado con el curso</p>
+</div>
+
+<!-- PÁGINA 5 -->
+<div class="page">
+<p>Puno, Noviembre del 2026</p>
+</div>
+</body>
+</html>
